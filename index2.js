@@ -21,33 +21,36 @@ const cliente1 = new Cliente("Ricardo", 38688877747, 5555555555);
 const cliente2 = new Cliente("Alice", 11122233344, 6666666666);
 
 
-const Conta1 = new ContaCorrente(cliente1, 1001);
+
+const conta1 = new ContaCorrente(cliente1, 1001);
 
 const conta2 = new ContaCorrente(cliente2, 102);
+
 
 //conta2.cliente = new Cliente();
 //conta2.cliente.nome = "Alice";
 //conta2.cliente.cpf = 11122233344;
 
 
-Conta1.depositar(500);
+conta1.depositar(500);
 //ContaCorrenteRicardo.depositar(-1110);
 //ContaCorrenteRicardo.depositar(-1);
 //console.log(ContaCorrenteRicardo.saldo);
 
-const valorSacado = Conta1.sacar(50);
+const valorSacado = conta1.sacar(50);
 //console.log(valorSacado);
 
 
-Conta1.transferir(50, conta2);
-conta2.transferir(10, Conta1);
+conta1.transferir(50, conta2);
+conta2.transferir(10, conta1);
 
 console.log(conta2);
-console.log(Conta1);
+console.log(conta1);
 
 console.log(conta2.saldo);
-console.log(Conta1.saldo);
+console.log(conta1.saldo);
 //console.log(cliente1);
 //console.log(cliente2);
 
-
+console.log(conta1);
+console.log(ContaCorrente.numeroDeContas);
